@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+
+h2{
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* .teste{
+    color: rebeccapurple;
+}
+
+.paragrafo{
+    font-size: 30px;
+} */
+
+
+/* aula sobre atributos */
+/* [nome=paragrafo]{
+    color: blue;
+} 
+
+[name]{
+    color: blue;
+}
+
+[type=text]{
+    width: 900px;
+}
+
+[type=button]{
+    background-color: red;
+} */
+
+
+/* aula de cores e background-color */
+
+/* div{
+    background-color: #585454;
+    color: #0f1d5a;
+}
+
+.bg{
+    width: 100%;
+    height: 400px;
+    background-image: url('landscape.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
+
+/* aula sobre dimensões*/
+
+/* .d1{
+    width: 50%;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    background-color: blue;
+    vertical-align: top;
+}
+
+.d2{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    display: inline-block;
+    background-color: red;
+
+}
+
+.d3{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    display: inline-block;
+    background-color: green;
+
+} */
+
+/* flexbox */
+
+.container{
+    display: flex;
+}
+
+.d1{
+    flex: 0.5;
+    height: 200px;
+    background-color: blue;
+}
+
+.d2{
+    flex: 0.25;
+    height: 800px;
+    background-color: red;
+
+}
+
+.d3{
+    flex: 0.25;
+    height: 300px;
+    background-color: green;
+
+}
+
+
+
