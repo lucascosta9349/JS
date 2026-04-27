@@ -1,23 +1,23 @@
-function monitoramentoDeServidor(servidor){
-    
-    let lentos = 0
-    let criticos = 0
-
-    for(let i = 0; i < servidor.length; i++){
-
-        if(servidor[i]>1000){
-            criticos++
-        }
-        else if(servidor[i]>500){
-            lentos++
-        }
+function verificarAcesso() {
+    const usuario = {
+    nome: "Lucas",
+    idade: 19,
+    ativo: true,
+    tentativasLogin: 2
     }
-    console.log(`Lentos: ${lentos} \nCríticos: ${criticos}`)
+
+    if(usuario.ativo == false){
+        return {acesso: false, motivo: "acesso negado.\nUsuário inativo"};
+    }
+    else if(usuario.tentativasLogin >= 3){
+        return {acesso: false, motivo: "acesso negado.\nNúmero de tentativas de login excedido"};
+    }
+    else if(usuario.idade < 18){
+        return {acesso: true, motivo: "entrando no modo limitado, idade insuficiente"};
+    }
+    else{
+        return {acesso: true, motivo: "acesso concedido"};
+    }
 }
 
-function main(){
-    const servidor = [120, 200, 450, 90, 800, 1100, 499, 700, 800, 1500, 500];
-    monitoramentoDeServidor(servidor)
-}
-
-main()
+console.log(verificarAcesso());
