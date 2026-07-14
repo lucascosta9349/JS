@@ -1,0 +1,56 @@
+git config:
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+
+git config --list
+
+git init
+
+git bash:
+git clone URL_DO_REPOSITORIO
+git status
+
+git commit -m "feat: adiciona tela de login"
+
+--------branches-----------
+git branch
+Criar uma branch:
+git branch feature/login
+Trocar de branch:
+git switch feature/login
+Criar e já entrar nela:
+git switch -c feature/login
+Voltar para main:
+git switch main
+Excluir uma branch local:
+git branch -d feature/login
+
+------------push------------
+Primeiro push de uma branch nova:
+git push -u origin feature/login
+git push
+
+------------Pull-------------
+Baixar e integrar alterações do remoto:
+git pull
+Ou especificando:
+git pull origin main
+
+-----------Merge-------------
+Exemplo: você terminou feature/login e quer juntar na main.
+git switch main
+git pull
+git merge feature/login
+git push
+
+----------------Pull Request--------------
+Pull Request não é normalmente criado com um comando Git. O fluxo é:
+git switch -c feature/login
+
+# trabalha no código...
+
+git add .
+git commit -m "feat: adiciona tela de login"
+git push -u origin feature/login
+Depois você entra no GitHub e cria o Pull Request:
+feature/login → main
